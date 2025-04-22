@@ -24,9 +24,9 @@ ENV PATH="/root/.local/bin:${PATH}"
 
 # 5. 애플리케이션 파일 복사
 #    - requirements.txt 를 먼저 복사하여 의존성 캐싱 활용
-COPY requirements.txt .
-COPY main.py .
-COPY banner.png .
+COPY ./app/requirements.txt .
+COPY ./app/main.py .
+COPY ./app/banner.png .
 
 # 6. Python 의존성 설치 (uv 사용, --no-cache 로 이미지 크기 최적화)
 RUN uv pip install --no-cache-dir -r requirements.txt
