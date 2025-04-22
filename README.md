@@ -3,7 +3,6 @@
 
 # ☁️ Cloud CSP Scrapper
 AWS, Azure, GCP의 **주간 업데이트 뉴스레터**를 자동으로 크롤링, 요약, 번역하여 메일로 보내주는 자동화 도구입니다.
----
 
 ## 📄 주요 기능
 ✅ Azure, AWS, GCP 주간 업데이트 수집  
@@ -14,7 +13,6 @@ AWS, Azure, GCP의 **주간 업데이트 뉴스레터**를 자동으로 크롤�
 
 **사전 요구 사항:**
 * Docker가 서버에 설치되어 있어야 합니다. (docker-install.md 참고)
----
 
 ## 🚀 설치 및 실행
 ### 1. 클론
@@ -61,12 +59,6 @@ sudo docker run --rm --env-file ./app/.env -v $(pwd)/app/output:/app/output myth
 ```
 
 ### 4. Cron을 이용한 Docker 컨테이너 자동 실행
-호스트 서버의 cron을 사용하여 주기적으로 docker run 명령어를 실행하도록 설정할 수 있습니다.
-crontab -e 명령으로 crontab 편집기를 열고 아래와 같이 등록합니다. (예: 매주 월요일 오전 7시에 실행)
-* 예시: 매주 월요일 오전 7시에 Docker 컨테이너 실행
-* 실제 환경 변수 값으로 변경해야 합니다.
-* $(pwd) 대신 output 디렉토리의 절대 경로를 사용하는 것이 더 안정적일 수 있습니다.
-
 ```bash
 crontab -e
 0 9 * * FRI cd /home/mythe82/csp-scrapper-uv && docker run --rm --env-file ./app/.env -v $(pwd)/app/output:/app/output csp-scrapper-uv
