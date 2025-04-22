@@ -1,0 +1,5 @@
+/app/output/
+*.env
+*.pyc
+__pycache__/
+*.log
