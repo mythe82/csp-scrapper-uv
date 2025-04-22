@@ -54,7 +54,7 @@ sudo docker build -t csp-scrapper-uv .
 sudo docker run --rm --env-file ./app/.env -v $(pwd)/app/output:/app/output csp-scrapper-uv
 ```
 
-# 외부 docker repo에서 받아 바로 실행도 가능
+외부 docker repo에서 받아 바로 실행도 가능
 ```bash
 sudo docker login
 sudo docker pull mythe627/csp-scrapper-uv:1
