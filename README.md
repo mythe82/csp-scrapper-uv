@@ -56,6 +56,7 @@ RUN uv run python -c "import matplotlib.font_manager; matplotlib.font_manager._l
 # 9. 컨테이너 실행 시 실행될 명령어 설정
 #    - 환경 변수는 docker run 시점에 주입
 CMD ["uv", "run", "python", "scraper.py"]
+```
 
 Dockerfile 설명:
  * FROM python:3.11-slim: 파이썬 3.11 슬림 버전을 기반으로 이미지를 만듭니다.
