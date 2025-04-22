@@ -1,13 +1,9 @@
-# csp-scrapper-uv
-
-# Docker를 이용한 클라우드 업데이트 스크래퍼 배포
-
-이 가이드는 앞서 설명한 Python 스크립트를 Docker 컨테이너 환경에서 실행하는 방법을 설명합니다. Docker를 사용하면 로컬 개발 환경, 테스트 서버, 운영 서버 등 어디서든 동일한 환경에서 스크립트를 실행할 수 있으며, 의존성 관리가 용이해집니다.
+# Docker를 이용한 csp-scrapper-uv 구성
+이 가이드는 앞서 구성한 csp-scrapper를 Docker 환경에서 실행하는 방법을 설명합니다. 
 
 **사전 요구 사항:**
-
-* Docker가 서버에 설치되어 있어야 합니다. (Docker 설치 가이드 참고)
-* 프로젝트 디렉토리에 `scraper.py`, `banner.png`, `requirements.txt` 파일이 준비되어 있어야 합니다. (`.env` 파일은 이미지에 직접 복사하지 않고 실행 시 환경 변수로 주입합니다.)
+* Docker가 서버에 설치되어 있어야 합니다. (docker-install.md 참고)
+* 프로젝트 디렉토리에 `main.py`, `banner.png`, `requirements.txt` 파일이 준비되어 있어야 합니다. (`.env` 파일은 이미지에 직접 복사하지 않고 실행 시 환경 변수로 주입합니다.)
 
 ---
 
