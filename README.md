@@ -64,5 +64,8 @@ sudo docker run --rm --env-file ./app/.env -v $(pwd)/app/output:/app/output myth
 ### 4. Cron을 이용한 Docker 컨테이너 자동 실행
 ```bash
 crontab -e
-0 9 * * FRI cd /home/mythe82/csp-scrapper-uv && docker run --rm --env-file ./app/.env -v $(pwd)/app/output:/app/output csp-scrapper-uv
+SHELL=/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+0 9 * * * cd /home/mythe82/csp-scrapper-uv && /usr/bin/docker run --rm --env-file ./app/.env -v $(pwd)/app/output:/app/output csp-scrapper-uv >> /home/mythe82/csp-cron.log 2>&1
 ```
