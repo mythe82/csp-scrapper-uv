@@ -42,7 +42,7 @@ vi app/.env
 SMTP_SERVER=smtp.gmail.com
 SMTP_PORT=587
 SENDER=youremail@gmail.com
-EMAIL_PASSWORD=yourpassword ex:elbjlqxepkwizbgg
+EMAIL_PASSWORD=yourpassword ex: jaaluqfsrvqkuskc
 RECEIVERS=email1@example.com,email2@example.com
 ```
 
